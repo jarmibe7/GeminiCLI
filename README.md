@@ -47,6 +47,10 @@ The prompt can be changed in gemini.py to customize responses and personality.
         echo "Usage: gemini \"question\"  OR  some_command | gemini"
     }
     ```
+5. Ensure the directory containing pipx executables is in your PATH
+    ```
+    export PATH="$PATH:/home/jarmibe7/.local/bin"
+    ```
 
 ## Usage
 There are three main uses:
