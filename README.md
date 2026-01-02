@@ -83,7 +83,10 @@ There are three main uses:
 
     Example 2:
     ```
-    > git log -n 20 --pretty=oneline | awk '{print $0 "\n\nSummarize the key changes in these commits in 3 sentences. Only output the summary."}' | gemini | tee README.txt
+    > git log -n 20 --pretty=oneline 
+    | awk '{print $0 "\n\nSummarize the key changes in these commits in 3 sentences. Only output the summary."}' 
+    | gemini 
+    | tee README.txt
 
     The project was initialized with a base configuration from a new Asus hardware setup. These commits establish the repository's starting point and foundational structure. Documentation was subsequently improved by adding content to the README file.
 
