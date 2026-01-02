@@ -3,7 +3,7 @@
 Author: Jared Berry
 
 ## Introduction
-The goal of this project was to create a simple Gemini agent that can be accessed with a command in the Linux terminal.
+The goal of this small project was to create a simple Gemini agent that can be accessed with a command in the Linux terminal. I also wanted to learn how to use the Gemini API for some future projects.
 
 The prompt can be changed in gemini.py to customize responses and personality.
 
