@@ -8,7 +8,7 @@ The goal of this project was to create a simple Gemini agent that can be accesse
 The prompt can be changed in gemini.py to customize responses and personality.
 
 ## Setup
-1. Clone the repo
+1. Clone the repo to ```~/.local/<your_desired_path>```
 2. Install via pipx
     ```
     # Install the Gemini CLI package
