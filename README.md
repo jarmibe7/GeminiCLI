@@ -9,7 +9,14 @@ The prompt can be changed in gemini.py to customize responses and personality.
 
 ## Setup
 1. Clone the repo
-2. Create a python environment and install all dependencies in requirements.txt.
+2. Install via pipx
+    ```
+    # Install the Gemini CLI package
+    pipx install ~/.local/<your_desired_path>
+
+    # Inject the Google Gemini client dependency
+    pipx inject gemini-cli google-genai
+    ```
 3. Ensure your Gemini API key is exported as an environment variable. Add the following to your ```~/.bashrc```:
     ```
     export GEMINI_API_KEY=<your_gemini_api_key>
@@ -19,20 +26,20 @@ The prompt can be changed in gemini.py to customize responses and personality.
     gemini() {
         # If stdin is not a TTY: pipe mode (someone is piping output)
         if [ ! -t 0 ]; then
-            ~/.local/ai-tools/gemini/gemini.py
+            ~/.local/bin/gemini
             return
         fi
 
         # If single argument in quotes, natural language question
         if [ $# -eq 1 ]; then
-            ~/.local/ai-tools/gemini/gemini.py "$1"
+            ~/.local/bin/gemini "$1"
             return
         fi
 
         # Otherwise, treat as a command: run it, capture stdout + stderr
         if [ $# -gt 0 ]; then
             # Run the command, capture stdout+stderr, pipe to gemini
-            "$@" 2>&1 | ~/.local/ai-tools/gemini/gemini.py
+            "$@" 2>&1 | ~/.local/bin/gemini
             return
         fi
 
