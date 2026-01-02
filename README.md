@@ -5,6 +5,8 @@ Author: Jared Berry
 ## Introduction
 The goal of this project was to create a simple Gemini agent that can be accessed with a command in the Linux terminal.
 
+The prompt can be changed in gemini.py to customize responses and personality.
+
 ## Setup
 1. Clone the repo
 2. Create a python environment and install all dependencies in requirements.txt.
